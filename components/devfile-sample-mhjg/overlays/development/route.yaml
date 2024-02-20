@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-mhjg
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-mhjg
+    app.kubernetes.io/part-of: tkrw-pr712-0075-0032-app
+  name: devfile-sample-mhjgf4ag
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: devfile-sample-mhjg
+    weight: null
+status: {}
